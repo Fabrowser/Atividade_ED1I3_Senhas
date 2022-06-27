@@ -111,8 +111,8 @@ int main(int argc, char** argv)
 
 		if (opcao==1) {
 				
-   			geradas++;
-		   	addSenha(filaSenhaGerada, geradas);
+   		geradas++;
+		addSenha(filaSenhaGerada, geradas);
 	
 					}
 					
@@ -126,19 +126,21 @@ int main(int argc, char** argv)
 			
 			//Testa se após o atendimento a fila está vazia e em caso positivo, mostra as senhas atendidas
 			if(isEmpty(filaSenhaGerada)==true){
-				cout << "SENHAS ATENDIDAS HOJE" << endl;
-				print(filaSenhaAtendida); 
-				return 0;  
+			cout << "SENHAS ATENDIDAS HOJE" << endl;
+			print(filaSenhaAtendida); 
+			return 0;  
 	
 											  }			
 					}
          				
-     			  	  	 cout << "SENHAS AGUARDANDO" << endl;
-						 print(filaSenhaGerada);
+       	 cout << "SENHAS AGUARDANDO" << endl;
+		 print(filaSenhaGerada);
 		   	   	   	}
-		   	   	   		cout << "SENHAS ATENDIDAS HOJE" << endl;
-   	   					print(filaSenhaAtendida);   	   
-
+		 cout << "SENHAS ATENDIDAS HOJE" << endl;
+   	   	 print(filaSenhaAtendida);   	   
+			   	   	freeFila(filaSenhaAtendida);
+			   	   	freeFila(filaSenhaGerada);
+			   	   						  		
 					return 0;
 }
 
