@@ -109,39 +109,39 @@ int main(int argc, char** argv)
 		cout <<	"DIGITE A OPCAO DESEJADA"<<endl;
 		cin >> opcao;
 
-		if (opcao==1) {
+	if (opcao==1) {
 				
-   		geradas++;
-		addSenha(filaSenhaGerada, geradas);
+   	geradas++;
+	addSenha(filaSenhaGerada, geradas);
 	
 					}
 					
-    	if (opcao==2) {
+    if (opcao==2) {
 				
 		
-			atendidas++;
-		   	addSenha(filaSenhaAtendida, atendidas);
-			Atende(filaSenhaGerada);
-			cout << "Fila vazia: " << (isEmpty(filaSenhaGerada)?"SIM":"NAO") << endl;
+	atendidas++;
+	addSenha(filaSenhaAtendida, atendidas);
+	Atende(filaSenhaGerada);
+	cout << "Fila vazia: " << (isEmpty(filaSenhaGerada)?"SIM":"NAO") << endl;
 			
-			//Testa se após o atendimento a fila está vazia e em caso positivo, mostra as senhas atendidas
-			if(isEmpty(filaSenhaGerada)==true){
-			cout << "SENHAS ATENDIDAS HOJE" << endl;
-			print(filaSenhaAtendida); 
-			return 0;  
+	//Testa se após o atendimento a fila está vazia e em caso positivo, mostra as senhas atendidas
+	if(isEmpty(filaSenhaGerada)==true){
+	cout << "SENHAS ATENDIDAS HOJE" << endl;
+	print(filaSenhaAtendida); 
+	return 0;  
 	
-											  }			
+					 }			
 					}
          				
-       	 cout << "SENHAS AGUARDANDO" << endl;
-		 print(filaSenhaGerada);
+	cout << "SENHAS AGUARDANDO" << endl;
+	print(filaSenhaGerada);
 		   	   	   	}
-		 cout << "SENHAS ATENDIDAS HOJE" << endl;
-   	   	 print(filaSenhaAtendida);   	   
-			   	   	freeFila(filaSenhaAtendida);
-			   	   	freeFila(filaSenhaGerada);
+	cout << "SENHAS ATENDIDAS HOJE" << endl;
+   	print(filaSenhaAtendida);   	   
+	freeFila(filaSenhaAtendida);
+	freeFila(filaSenhaGerada);
 			   	   						  		
-					return 0;
+	return 0;
 }
 
 
